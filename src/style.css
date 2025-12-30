@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@keyframes gradientPingPong {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-ultra {
+  background: linear-gradient(120deg,
+      #ff0000,
+      #ff7f00,
+      #ffff00,
+      #00ff00,
+      #00ffff,
+      #0000ff,
+      #8b00ff,
+      #ff0000);
+  background-size: 500% 500%;
+  animation: gradientPingPong 1s linear infinite;
+}
+
+.gradient-smooth {
+  will-change: background-position;
+}
