@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+cloudinary.py
+script.js
+uploaded_images.json
+*upload

@@ -2,79 +2,79 @@
   {
     "id": 1,
     "name": "An hy",
-    "avatar": "/src/assets/avatar/anhy.gif",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767170747/avatar/anhy.gif",
     "alt": "anhy"
   },
   {
     "id": 2,
     "name": "Bầu Vỹ aka Vỹ maid",
-    "avatar": "/src/assets/avatar/bauvy.png",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767174405/avatar/tufff.gif",
     "alt": "bauvy"
   },
   {
     "id": 3,
     "name": "Kuroart aka cudo",
-    "avatar": "/src/assets/avatar/cudo.png",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767170118/avatar/cudo.png",
     "alt": "cudo"
   },
   {
     "id": 4,
-    "name": "Zêri aka Duy gay",
-    "avatar": "/src/assets/avatar/duygay.png",
+    "name": "Zêri aka Chuột ngu",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767170119/avatar/duygay.png",
     "alt": "duygay"
   },
   {
     "id": 5,
     "name": "Kuchen aka chén ku cho",
-    "avatar": "/src/assets/avatar/kuchen.gif",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767174220/avatar/kuchen.gif",
     "alt": "kuchen"
   },
   {
     "id": 6,
     "name": "Lamo",
-    "avatar": "/src/assets/avatar/lamo.png",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767170121/avatar/lamo.png",
     "alt": "lamo"
   },
   {
     "id": 7,
     "name": "Maple",
-    "avatar": "/src/assets/avatar/maple.png",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767170122/avatar/maple.png",
     "alt": "maple"
   },
   {
     "id": 8,
     "name": "Perry aka anh trai Toàn",
-    "avatar": "/src/assets/avatar/perry.png",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767170123/avatar/perry.png",
     "alt": "perry"
   },
   {
     "id": 9,
     "name": "Thiên gay",
-    "avatar": "/src/assets/avatar/thiengay.png",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767170124/avatar/thiengay.png",
     "alt": "thiengay"
   },
   {
     "id": 10,
     "name": "Sh12 aka Thịnh Tu",
-    "avatar": "/src/assets/avatar/thinhtu.png",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767170124/avatar/thinhtu.png",
     "alt": "thinhtu"
   },
   {
     "id": 11,
     "name": "Toàn aka chích trình",
-    "avatar": "/src/assets/avatar/toan.png",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767170126/avatar/toan.png",
     "alt": "toan"
   },
   {
     "id": 12,
     "name": "Trung Nguyen aka Mr.Cafe",
-    "avatar": "/src/assets/avatar/ucbip.gif",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767170760/avatar/ucbip.gif",
     "alt": "ucbip"
   },
   {
     "id": 13,
     "name": "Others",
-    "avatar": "/src/assets/avatar/zother.png",
+    "avatar": "https://res.cloudinary.com/duwrlqld6/image/upload/v1767170126/avatar/zother.jpg",
     "alt": "zother"
   }
 ]

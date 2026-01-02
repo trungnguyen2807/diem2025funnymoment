@@ -4,10 +4,9 @@ let data;
 const option = document.getElementById("option");
 const gallery = document.getElementById("gallery");
 const button = document.getElementById("button");
-const urlHead = "/src/assets/langdiem2025";
 
 async function getData() {
-  const url = "/data.json";
+  const url = "/diem2025funnymoment/data.json";
   try {
     const res = await fetch(url);
     if (!res.ok) {
@@ -21,7 +20,6 @@ async function getData() {
   }
 }
 data = await getData();
-console.log(data);
 function renderOption(data) {
   let html = "";
   function optionHtml(name, img, alt) {
@@ -48,12 +46,12 @@ function imageExists(src) {
   });
 }
 function renderImage(e) {
+  const card = e.target.closest(".gradient-ultra");
+  if (!card || !option.contains(card)) return;
   // Hide option and show gallery and button
   option.classList.add("hidden");
   button.classList.remove("hidden");
   gallery.classList.remove("hidden");
-  const card = e.target.closest(".gradient-ultra");
-  if (!card || !option.contains(card)) return;
   const nameChosen = card.querySelector("img").alt;
   if (!nameChosen) return;
   console.log(nameChosen);
@@ -63,23 +61,43 @@ function renderImage(e) {
 
   async function loadImages() {
     let i = 0;
+    let imageArray;
     let html = "";
+    const url = "/diem2025funnymoment/image.json";
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        throw new Error(`Response status: ${res.status}`);
+      }
 
-    while (true) {
-      const imgUrl = `${urlHead}/${nameChosen}/${nameChosen}${i}.png`;
-
-      const exists = await imageExists(imgUrl); // ✅ hợp lệ
-
-      if (!exists) break;
-
-      html += `
-      <div class="mb-4 w-full">
-        <img src="${imgUrl}" alt="" />
-      </div>
-    `;
-
-      i++;
+      const result = await res.json();
+      imageArray = result[nameChosen];
+    } catch (error) {
+      console.error(error.message);
     }
+    console.log(imageArray);
+    for (let i = 0; i < imageArray.length; i++) {
+      html += `
+        <div class="mb-4 w-full">
+          <img src="${imageArray[i].url}" alt="" />
+        </div>
+      `;
+    }
+    // while (true) {
+    //   const imgUrl = `${urlHead}/${nameChosen}/${nameChosen}${i}.png`;
+
+    //   const exists = await imageExists(imgUrl); // ✅ hợp lệ
+
+    //   if (!exists) break;
+
+    //   html += `
+    //   <div class="mb-4 w-full">
+    //     <img src="${imgUrl}" alt="" />
+    //   </div>
+    // `;
+
+    //   i++;
+    // }
 
     gallery.innerHTML = html;
   }
