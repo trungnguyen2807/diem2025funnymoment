@@ -4,6 +4,7 @@ let data;
 const option = document.getElementById("option");
 const gallery = document.getElementById("gallery");
 const button = document.getElementById("button");
+const imageShow = document.getElementById("image-show");
 
 async function getData() {
   const url = "/diem2025funnymoment/data.json";
@@ -78,30 +79,30 @@ function renderImage(e) {
     console.log(imageArray);
     for (let i = 0; i < imageArray.length; i++) {
       html += `
-        <div class="mb-4 w-full">
+        <div class="mb-4 w-full cursor-pointer">
           <img src="${imageArray[i].url}" alt="" />
         </div>
       `;
     }
-    // while (true) {
-    //   const imgUrl = `${urlHead}/${nameChosen}/${nameChosen}${i}.png`;
-
-    //   const exists = await imageExists(imgUrl); // ✅ hợp lệ
-
-    //   if (!exists) break;
-
-    //   html += `
-    //   <div class="mb-4 w-full">
-    //     <img src="${imgUrl}" alt="" />
-    //   </div>
-    // `;
-
-    //   i++;
-    // }
 
     gallery.innerHTML = html;
   }
   loadImages();
+}
+function handleClickedImage(e) {
+  const img = e.target.closest("img");
+  const imgShow = imageShow.querySelector("img");
+  if (!img || !gallery.contains(img)) return;
+  imageShow.classList.remove("hidden");
+  imageShow.classList.add("flex");
+  document.body.style.overflow = "hidden";
+  imgShow.src = img.src;
+}
+function handleImageShow(e) {
+  const imgShow = imageShow.querySelector("img");
+  imgShow.src = "";
+  imageShow.classList.remove("flex");
+  imageShow.classList.add("hidden");
 }
 renderOption(data);
 option.addEventListener("click", renderImage);
@@ -110,3 +111,5 @@ button.addEventListener("click", () => {
   button.classList.add("hidden");
   gallery.classList.add("hidden");
 });
+gallery.addEventListener("click", handleClickedImage);
+imageShow.addEventListener("click", handleImageShow);
