@@ -99,6 +99,7 @@ function handleClickedImage(e) {
   imgShow.src = img.src;
 }
 function handleImageShow(e) {
+  document.body.style.overflow = "";
   const imgShow = imageShow.querySelector("img");
   imgShow.src = "";
   imageShow.classList.remove("flex");
